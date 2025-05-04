@@ -2,5 +2,57 @@
 html {
     background-color: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: greenyellow;
+    color: rgb(25, 176, 9);
 }
+
+a {
+    color: rgb(25, 176, 9);
+}
+
+.banners {
+    padding-bottom: 45px;
+    padding-top: 45px;
+    margin: 50px;
+    text-align: center;
+    border: 3px solid rgb(25, 176, 9);
+}
+
+.list {
+    display: flex; /* Enable flex container */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    list-style: none; /* Remove default list styling (bullets) */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+  }
+  
+  .list li {
+    /* Define how each list item should behave in the grid */
+    flex-basis: calc(33.33% - 20px); /* Roughly 3 items per row, with some spacing */
+    margin-bottom: 20px; /* Space between rows */
+    margin-right: 20px; /* Space between columns */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    /* Add any other desired styling for the list items here */
+    border: 1px solid rgb(25, 176, 9); /* Example border */
+    padding: 15px; /* Example padding */
+    text-align: center; /* Example text alignment */
+  }
+  
+  /* Adjust for smaller screens if needed */
+  @media (max-width: 768px) {
+    .list li {
+      flex-basis: calc(50% - 10px); /* Two items per row on medium screens */
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .list li {
+      flex-basis: 100%; /* One item per row on small screens */
+      margin-right: 0;
+    }
+  }
+
+  .thumbnails {
+    height: 200px;
+  }
